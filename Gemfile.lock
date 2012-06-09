@@ -31,7 +31,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  httparty
   jammed
+  json
   sinatra (~> 1.3.2)
   sinatra-partial
   thin

@@ -1,3 +1,5 @@
+require './spot-search.rb'
+
 class JamToSpot < Sinatra::Base
   enable :sessions 
 
@@ -8,6 +10,7 @@ class JamToSpot < Sinatra::Base
   ######################################################
 
   get '/' do 
+    track = SpotSearch::Base.search('shake your rump')
     erb :index
   end
 end
