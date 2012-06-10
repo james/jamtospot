@@ -1,0 +1,1 @@
+Simple ruby app that uses Jammed to generate a Spotify playlist from a ThisIsMyJam user's jams.
