@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title><%= settings.title %></title>
+    <link rel="stylesheet" href="/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata|Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="/"><h1>Jam To Spot</h1></a>
+        <a href="/"><h4>Convert your ThisIsMyJam.com jams into a Spotify playlist</h4></a>
+      </header>
+      <div id="main">
+        <%= yield %>
+      </div>
+      <footer>
+        <br/>
+        <p><small>Brought to you by way of <a href="https://github.com/seanslerner/Jammed">Jammed</a>, a Ruby API wrapper for <a href="http://www.thisismyjam.com/">This Is My Jam</a>.</small></p>
+      </footer>
+    </div>
+  </body>
+</html>

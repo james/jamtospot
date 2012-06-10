@@ -1,0 +1,24 @@
+<div class="results">
+  <div class="jams">
+    <div id="jam-count">
+      <h4>You have <%= @jam_count %> jams, but I could only find these on Spotify:</h4>
+    </div>
+
+    <div id="jams-found">
+      <% @data.each do |jam| %>
+        <p><%= "#{jam[0]} - #{jam[1]}" if jam[2] %></p>
+      <% end %>
+    </div>
+  </div>
+  <div class="playlist">
+    <div id="copy">
+      <h4>Copy and Paste these Spotify URIs into a new playlist!</h4>
+    </div>
+
+    <div id="spotify">
+      <% @data.each do |jam| %>
+        <p><%= jam[2] %></p>
+      <% end %>
+    </div>
+  </div>
+</div>

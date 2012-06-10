@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a:link {
+  text-decoration: none; 
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover, a:active, a:focus { 
+  text-decoration: none;
+}
+
+.container {
+}
+
+header {
+  height: 80px;
+  background: #000000;
+  border-top: 2px solid yellow;
+  color: #CCCCCC;
+}
+
+header a {
+  color: #CCCCCC;
+}
+
+header h1 {
+  margin: 0 20px;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+header h4 {
+  margin: 0 10px;
+}
+
+#main {
+  min-height: 550px;
+  margin: 0 0 20px;
+}
+
+#username {
+  margin: 10px;
+  text-align: center;
+}
+
+.results {
+  width: 960px;
+  margin: 5px auto;
+}
+
+.jams {
+  float: left;
+}
+
+#jam-count {
+  text-align: center;
+  width: 460px;
+  height: 60px;
+  margin: 0 5px;
+  border: 1px solid black;
+  background: yellow;
+}
+
+#jams-found {
+  width: 460px;
+  margin: 0 5px;
+  line-height: 5px;
+}
+
+.playlist {
+  float: left;
+}
+
+#copy {
+  text-align: center;
+  border: 1px solid black;
+  background: yellow;
+  width: 460px;
+  height: 60px;
+  margin: 0 5px;
+}
+
+#spotify {
+  width: 460px;
+  margin: 0 5px;
+  font-family: 'Inconsolata', sans-serif;
+  line-height: 5px;
+}
+
+footer {
+  height: 60px;
+  background: yellow;
+  text-align: center;
+}
