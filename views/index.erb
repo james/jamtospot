@@ -1,5 +1,22 @@
 <form action="/" class="username" id="username" method="post">
-  <p>Enter your This Is My Jam
-  <input id="username" name="username" placeholder="Username"></input></p><br />
-  <input type="submit" value="Generate my playlist!" />
+  <br />
+  <h2>Enter your ThisIsMyJam Username</h2>
+  <p><input class="user-input" id="username" name="username" placeholder="Username"></input></p><br />
+  <input type="submit" class="submit" id="submit" value="Generate my playlist!" />
 </form>
+
+<center>
+  <div id="loading">
+    <br>
+    Looking up your jams.<br> 
+    This may take a while if you have a lot of jams!
+    <br>
+    <img src="loading.gif"/>
+  </div>
+</center>
+
+<script type="text/javascript">
+  $('#submit').click(function(){
+    $('#loading').fadeIn();
+  })
+</script>

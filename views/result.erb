@@ -1,24 +1,31 @@
 <div class="results">
   <div class="jams">
     <div id="jam-count">
+      <br />
       <h4>You have <%= @jam_count %> jams, but I could only find these on Spotify:</h4>
     </div>
 
     <div id="jams-found">
-      <% @data.each do |jam| %>
-        <p><%= "#{jam[0]} - #{jam[1]}" if jam[2] %></p>
-      <% end %>
+      <ul>
+        <% @data.each do |jam| %>
+          <%= "<li>" + "#{jam[0]} - #{jam[1]}" + "</li>" if jam[2] %>
+        <% end %>
+      </ul>
     </div>
   </div>
   <div class="playlist">
     <div id="copy">
+      <br />
       <h4>Copy and Paste these Spotify URIs into a new playlist!</h4>
     </div>
 
     <div id="spotify">
-      <% @data.each do |jam| %>
-        <p><%= jam[2] %></p>
-      <% end %>
+      <ul>
+        <% @data.each do |jam| %>
+          <%= "<li>#{jam[2]}</li>" if jam[2] %>
+        <% end %>
+      </ul>
     </div>
   </div>
+  <div style="clear: both;"></div>
 </div>

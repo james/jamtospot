@@ -4,6 +4,7 @@
     <title><%= settings.title %></title>
     <link rel="stylesheet" href="/style.css">
     <link href='http://fonts.googleapis.com/css?family=Inconsolata|Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -14,10 +15,11 @@
       <div id="main">
         <%= yield %>
       </div>
-      <footer>
+      <div class="push"></div>
+    </div>
+    <footer>
         <br/>
         <p><small>Brought to you by way of <a href="https://github.com/seanslerner/Jammed">Jammed</a>, a Ruby API wrapper for <a href="http://www.thisismyjam.com/">This Is My Jam</a>.</small></p>
       </footer>
-    </div>
   </body>
 </html>

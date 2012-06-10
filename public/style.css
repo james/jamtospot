@@ -1,5 +1,9 @@
-body {
+* {
   margin: 0;
+}
+html { height: 100%; }
+body {
+  height: 100%;
   width: 100%;
   font-family: 'Open Sans', sans-serif;
 }
@@ -14,7 +18,15 @@ a:hover, a:active, a:focus {
   text-decoration: none;
 }
 
+li {
+  padding: 3px 0 0 0;
+}
+
 .container {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px; 
 }
 
 header {
@@ -39,8 +51,8 @@ header h4 {
 }
 
 #main {
-  min-height: 550px;
-  margin: 0 0 20px;
+  margin: 0;
+  padding: 0 0 60px;
 }
 
 #username {
@@ -48,8 +60,17 @@ header h4 {
   text-align: center;
 }
 
+.user-input {
+  height: 45px;
+  font-size: 30px;
+}
+
+#loading {
+  display: none;
+}
+
 .results {
-  width: 960px;
+  width: 1000px;
   margin: 5px auto;
 }
 
@@ -59,7 +80,7 @@ header h4 {
 
 #jam-count {
   text-align: center;
-  width: 460px;
+  width: 480px;
   height: 60px;
   margin: 0 5px;
   border: 1px solid black;
@@ -67,9 +88,14 @@ header h4 {
 }
 
 #jams-found {
-  width: 460px;
+  width: 480px;
   margin: 0 5px;
-  line-height: 5px;
+  font-family: 'Inconsolata', sans-serif;
+}
+
+#jams-found ul {
+  list-style: none;
+  padding: 0 0 0 3px;
 }
 
 .playlist {
@@ -80,20 +106,59 @@ header h4 {
   text-align: center;
   border: 1px solid black;
   background: yellow;
-  width: 460px;
+  width: 480px;
   height: 60px;
   margin: 0 5px;
 }
 
 #spotify {
-  width: 460px;
+  width: 480px;
   margin: 0 5px;
   font-family: 'Inconsolata', sans-serif;
-  line-height: 5px;
 }
+
+#spotify ul {
+  list-style: none;
+  padding: 0 0 0 3px;
+}
+
+.push { height:60px;}
 
 footer {
   height: 60px;
   background: yellow;
   text-align: center;
+}
+
+.submit {
+  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffc2), color-stop(1, #ffff00) );
+  background:-moz-linear-gradient( center top, #ffffc2 5%, #ffff00 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffc2', endColorstr='#ffff00');
+  background-color:#ffffc2;
+  -moz-border-radius:42px;
+  -webkit-border-radius:42px;
+  border-radius:42px;
+  border:3px solid #c2c29b;
+  display:inline-block;
+  color:#777777;
+  font-family:arial;
+  font-size:28px;
+  font-weight:bold;
+  padding:16px 12px;
+  text-decoration:none;
+  text-shadow:1px 1px 0px #ffffff;
+  cursor: pointer;
+}.submit:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffff00), color-stop(1, #ffffc2) );
+  background:-moz-linear-gradient( center top, #ffff00 5%, #ffffc2 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff00', endColorstr='#ffffc2');
+  background-color:#ffff00;
+  cursor: pointer;
+}.submit:active {
+  position:relative;
+  top:1px;
+  cursor: pointer;
 }

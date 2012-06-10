@@ -14,10 +14,10 @@ class JamToSpot < Sinatra::Base
   end
 
   post '/' do
-    redirect "/result/#{params[:username]}"
+    redirect "/playlist/#{params[:username]}"
   end
 
-  get '/result/:username' do
+  get '/playlist/:username' do
     jammed = Jammed.new
     jams = jammed.jams(params[:username])
     @jam_count = jams.length
