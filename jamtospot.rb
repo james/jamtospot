@@ -35,7 +35,10 @@ class JamToSpot < Sinatra::Base
 
     jam_titles.each_with_index do |track, i|
       artist = jam_artists[i]
-      @data << [artist, track, SpotSearch::Base.search(track, artist)]
+      begin
+        @data << [artist, track, SpotSearch::Base.search(track, artist)]
+      rescue
+      end
     end
     p @data
 
