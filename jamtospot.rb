@@ -19,13 +19,15 @@ class JamToSpot < Sinatra::Base
 
   get '/playlist/:username' do
     jammed = Jammed.new
-    jams = jammed.jams(params[:username])
     @jam_count = jams.length
     jam_titles = []
     jam_artists = []
-    jams.each do |j|
-      jam_titles << j['title']
-      jam_artists << j['artist']
+    following = jammed.following(params[:username]).each do |followee|
+      jams = jammed.jams(followee['name'])
+      jams.each do |j|
+        jam_titles << j['title']
+        jam_artists << j['artist']
+      end
     end
 
     @data = []
